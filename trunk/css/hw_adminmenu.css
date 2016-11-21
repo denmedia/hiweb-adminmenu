@@ -1,0 +1,6 @@
+.hw_adminmenu > li:not(.ui-sortable-helper) > a {
+  transition: all 0.3s ease-in; }
+.hw_adminmenu .wp-menu-separator {
+  border-bottom: 1px solid grey; }
+
+/*# sourceMappingURL=hw_adminmenu.css.map */
