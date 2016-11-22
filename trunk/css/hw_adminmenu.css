@@ -1,6 +1,61 @@
-.hw_adminmenu > li:not(.ui-sortable-helper) > a {
-  transition: all 0.3s ease-in; }
-.hw_adminmenu .wp-menu-separator {
-  border-bottom: 1px solid grey; }
+#adminmenu #hw-adminmenu-edit-item {
+  clear: both;
+  clear: both; }
+  #adminmenu #hw-adminmenu-edit-item .wp-menu-image {
+    clear: both; }
+  #adminmenu #hw-adminmenu-edit-item input[type="checkbox"] {
+    display: none; }
+    #adminmenu #hw-adminmenu-edit-item input[type="checkbox"] + label {
+      padding-left: 36px;
+      padding-right: 12px;
+      cursor: pointer;
+      position: relative;
+      font-family: tahoma, sans-serif, arial;
+      display: block; }
+    #adminmenu #hw-adminmenu-edit-item input[type="checkbox"] + label::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      right: 0;
+      vertical-align: middle;
+      padding: 0;
+      height: 14px;
+      width: 26px;
+      margin: 0 5px 0 0;
+      border: 1px solid #32373c;
+      border-radius: 12px;
+      background: #32373c;
+      transition: all .2s ease-out; }
+    #adminmenu #hw-adminmenu-edit-item input[type="checkbox"] + label::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: 18px;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #32373c;
+      box-shadow: 0 3px 3px rgba(50, 55, 60, 0.1);
+      transition: all .2s ease-out; }
+    #adminmenu #hw-adminmenu-edit-item input[type="checkbox"]:checked + label::before {
+      background: #0073aa;
+      border-color: #0073aa; }
+    #adminmenu #hw-adminmenu-edit-item input[type="checkbox"]:checked + label::after {
+      right: 6px; }
+#adminmenu.hw_adminmenu > .menu-top:not(.ui-sortable-helper), #adminmenu.hw_adminmenu > .wp-menu-separator:not(.ui-sortable-helper) {
+  transition: all 0.3s ease-in-out; }
+#adminmenu.hw_adminmenu .wp-menu-separator {
+  border-bottom: 3px dashed grey; }
+#adminmenu.hw_adminmenu .ui-sortable-helper {
+  cursor: pointer;
+  cursor: hand;
+  transform: scale(1.12) !important;
+  transition: transform,box-shadow 0.2s ease-in-out;
+  -webkit-box-shadow: 10px 25px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 25px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 25px 15px 0px rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=hw_adminmenu.css.map */

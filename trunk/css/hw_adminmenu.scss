@@ -1,8 +1,33 @@
-.hw_adminmenu {
-	& > li:not(.ui-sortable-helper) > a {
-		transition: all 0.3s ease-in;
+#adminmenu {
+
+	#hw-adminmenu-edit-item {
+		clear: both; clear: both;
+		.wp-menu-image {
+			clear: both;
+		}
+
+		@import "checkbox";
+
 	}
-	.wp-menu-separator {
-		border-bottom: 1px solid grey;
+
+	&.hw_adminmenu {
+		& > .menu-top:not(.ui-sortable-helper), & > .wp-menu-separator:not(.ui-sortable-helper) {
+			transition: all 0.3s ease-in-out;
+		}
+		.wp-menu-separator {
+			border-bottom: 3px dashed grey;
+		}
+
+		.ui-sortable-helper {
+			cursor: pointer;
+			cursor: hand;
+			transform: scale(1.12) !important;
+			transition: transform,box-shadow 0.2s ease-in-out;
+			-webkit-box-shadow: 10px 25px 15px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 10px 25px 15px 0px rgba(0,0,0,0.5);
+			box-shadow: 10px 25px 15px 0px rgba(0,0,0,0.5);
+		}
 	}
+
+
 }

@@ -1,0 +1,67 @@
+//colors
+$color_alto_approx: #32373c;
+$white: #fff;
+$color_stack_10_approx: rgba(50, 55, 60, .1);
+$color_pastel_green_approx: #0073aa;
+$color_mantis_approx: #0073aa;
+
+//fonts
+$font_0: tahoma;
+$font_1: sans-serif;
+$font_2: arial;
+
+input[type="checkbox"] {
+	display: none;
+	+ label {
+		padding-left: 36px;
+		padding-right: 12px;
+		cursor: pointer;
+		position: relative;
+		font-family: $font_0, $font_1, $font_2;
+		display: block;
+	}
+	+ label::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 2px;
+		right: 0;
+		vertical-align: middle;
+		padding: 0;
+		height: 14px;
+		width: 26px;
+		margin: 0 5px 0 0;
+		border: 1px solid $color_alto_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 12px;
+		background: $color_alto_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-out;
+	}
+	+ label::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 3px;
+		right: 18px;
+		width: 12px;
+		height: 12px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 12px;
+		background: $white;
+		border: 1px solid $color_alto_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 3px 3px $color_stack_10_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-out;
+	}
+	&:checked {
+		+ label::before {
+			background: $color_pastel_green_approx;
+			border-color: $color_mantis_approx;
+		}
+		+ label::after {
+			right: 6px;
+		}
+	}
+}
