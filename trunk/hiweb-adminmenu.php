@@ -2,7 +2,7 @@
 	
 	/**
 	 * Plugin Name: hiWeb AdminMenu
-	 * Description: Admin AdminMenu: Drag&Drop, Show and Hide items.
+	 * Description: AdminMenu: Drag&Drop, Show and Hide items. An easy way to SORT, HIDE items admin menu.
 	 */
 	
 	include_once 'inc/hiweb-adminmenu-core.php';
