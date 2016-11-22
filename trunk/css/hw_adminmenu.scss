@@ -7,27 +7,96 @@
 		}
 
 		@import "checkbox";
-
 	}
 
 	&.hw_adminmenu {
-		& > .menu-top:not(.ui-sortable-helper), & > .wp-menu-separator:not(.ui-sortable-helper) {
-			transition: all 0.3s ease-in-out;
+		& > .menu-top, & > .wp-menu-separator {
+			&:not(.ui-sortable-helper) {
+				transition: all 0.3s ease-in-out;
+				&, a {
+					cursor: url("../img/cursor_drag_1.png"), pointer;
+				}
+			}
+			.popup { display: none; }
 		}
 		.wp-menu-separator {
-			border-bottom: 3px dashed grey;
+			border-bottom-style: dotted;
+			border-bottom-width: 5px;
 		}
 
 		.ui-sortable-helper {
-			cursor: pointer;
-			cursor: hand;
-			transform: scale(1.12) !important;
-			transition: transform,box-shadow 0.2s ease-in-out;
-			-webkit-box-shadow: 10px 25px 15px 0px rgba(0,0,0,0.5);
-			-moz-box-shadow: 10px 25px 15px 0px rgba(0,0,0,0.5);
-			box-shadow: 10px 25px 15px 0px rgba(0,0,0,0.5);
+			&, * { cursor: url("../img/cursor_drag_2.png"), pointer; }
+			transform: scale(1.12);
+			transition: transform, box-shadow 0.2s ease-out;
+			-webkit-box-shadow: 10px 25px 15px 0px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 10px 25px 15px 0px rgba(0, 0, 0, 0.5);
+			box-shadow: 10px 25px 15px 0px rgba(0, 0, 0, 0.5);
+
+			&.opensub .wp-submenu {
+				display: none;
+			}
+
+			&.hw-adminmenu-item-hide {
+				transform: scale(1.1);
+				opacity: 0.5 !important;
+				-moz-opacity: 0.5 !important;
+				transition: opacity, transform 0.5s ease-out;
+
+				.popup {
+					display: block;
+					position: absolute;
+					top: -25px; left: 50%;
+					margin-left: -40px;
+					background: #fff;
+					font-size: 80px;
+					-webkit-border-radius: 80px;
+					-moz-border-radius: 80px;
+					border-radius: 80px;
+					width: 80px; height: 80px;
+					opacity: 1 !important;
+					-moz-opacity: 1 !important;
+				}
+			}
+
+		}
+
+		.hw-adminmenu-tools {
+			display: block;
+			text-align: center;
+			opacity: 1;
+			position: static;
+			transition: transform,color 0.5s ease-in;
+			font-size: inherit;
+			height: 90px;
+			.dashicons {
+				font-size: 60px;
+				width: auto; height: auto;
+			}
+			&:hover, &.over {
+				color: #fff;
+				transition: transform,color 0.2s ease-in;
+				-webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2);
+			}
+			&:active {
+				-webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1);
+				transition: transform 0.0s;
+			}
+			&#hw-adminmenu-drop-zone-hide, &.hidden {
+				opacity: 0;
+				height: 0;
+				display: none !important;
+			}
+			&#hw-adminmenu-drop-zone-hide.visible {
+				display: block !important;
+				height: 90px;
+				transition: none;
+				opacity: 1;
+			}
 		}
 	}
 
+	.hw-adminmenu-tools {
+		opacity: 0; display: none; height: 0;
+	}
 
 }
