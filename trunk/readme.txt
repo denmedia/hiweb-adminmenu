@@ -1,4 +1,4 @@
-=== hiWeb AdmiMenu ===
+=== hiWeb AdminMenu ===
 Contributors: Den Media
 Donate link:
 Tags: admin menu, admin menu items, admin, menu, sort, sortable, drag, draggable, order, items, free, plugin, move, cms, view, drag drop, drag&drop, drag & drop, drag and drop, dar n drop, admin items, ajax, sidebar menu, sidebar admin

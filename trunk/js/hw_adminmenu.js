@@ -77,7 +77,7 @@ var hw_adminmenu = {
 		hw_adminmenu.e_sortable = jQuery(hw_adminmenu.e_adminmenu).sortable({
 			items     : hw_adminmenu.e_elements_child,
 			distance  : 3,
-			opacity   : 0.5,
+			opacity   : 0.9,
 			revert    : 250,
 			live      : true,
 			start     : function (e, b) {
