@@ -1,22 +1,12 @@
 <?php
-	
+
 	/**
 	 * Plugin Name: hiWeb AdminMenu
 	 * Description: AdminMenu: Drag&Drop, Show and Hide items. An easy way to SORT, HIDE items admin menu.
+	 * Version: 1.0.0.0
+	 * Author: Den Media
+	 * Author URI: http://hiweb.moscow
 	 */
-	
+
 	include_once 'inc/hiweb-adminmenu-core.php';
-	
-	if( !function_exists( 'hiweb_adminmenu' ) ){
-		function hiweb_adminmenu(){
-			static $class;
-			if( !$class instanceof hw_adminmenu )
-				$class = new hw_adminmenu();
-			return $class;
-		}
-	}
-	
-	add_action( 'admin_enqueue_scripts', array( hiweb_adminmenu(), 'admin_enqueue_scripts' ) );
-	add_action( 'wp_ajax_hw_adminmenu_edit_item', array(hiweb_adminmenu(),'wp_ajax_hw_adminmenu_edit_item') );
-	add_action( 'wp_ajax_hw_adminmenu_save_items', array(hiweb_adminmenu(),'wp_ajax_hw_adminmenu_save_items') );
-	add_action('admin_head', array(hiweb_adminmenu(),'admin_head') );
+	include_once 'inc/hooks.php';
